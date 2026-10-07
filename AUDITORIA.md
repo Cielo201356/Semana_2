@@ -62,32 +62,29 @@ Además, la opción de GitHub Pages quedó habilitada en el repositorio.
 - El repositorio tiene la estructura base necesaria.
 - La documentación del proyecto está creada.
 - GitHub Pages está habilitado para el repositorio.
-- El workflow de despliegue está preparado para ejecutarse.
+- El workflow de GitHub Actions completó correctamente el despliegue más reciente en `main` (ejecución [#4](https://github.com/Cielo201356/Semana_2/actions/runs/37659315864), commit `74f696d`).
+- La URL pública de GitHub Pages responde con HTTP 200 y muestra el formulario publicado: <https://cielo201356.github.io/Semana_2/>.
 
-### Pendiente
+### Pendientes
 
-- Ejecutar y completar el primer despliegue del workflow en GitHub Actions.
-- Confirmar que la URL pública responde con la página publicada.
+- No quedan pendientes para completar y verificar el despliegue inicial.
 
 ## Observaciones
 
-### Riesgos identificados
+### Riesgos y observaciones
 
-- La publicación final depende de la ejecución exitosa del workflow en GitHub.
-- Si el workflow falla, la causa puede estar en la configuración del entorno o en la visibilidad del repositorio.
-- Es necesario validar la URL pública al finalizar el deployment.
+- La primera ejecución del workflow falló; las ejecuciones posteriores completaron correctamente, incluida la ejecución más reciente (#4).
+- El job `deploy` y sus pasos de configuración, carga del artefacto y publicación terminaron con éxito.
 
 ### Evidencia técnica
 
-Se verificó que la URL de GitHub Pages devuelve `404` mientras la publicación final no se ha completado, lo que confirma que la web no está aún publicada en producción, aunque la configuración base y el workflow ya existen.
+Se verificó que la ejecución más reciente del workflow concluyó con estado `success` para el commit `74f696d985455c29d5f8179accce85ba06acf8fd`. La URL <https://cielo201356.github.io/Semana_2/> devuelve HTTP 200 y presenta el formulario “Crear cuenta”.
 
 ## Recomendaciones
 
-1. Revisar la pestaña `Actions` en GitHub.
-2. Ejecutar manualmente el workflow si aún no se ha lanzado.
-3. Confirmar la publicación final en la URL del sitio.
-4. Mantener la documentación actualizada con cada cambio relevante.
+1. Consultar la [ejecución completada](https://github.com/Cielo201356/Semana_2/actions/runs/37659315864) en la pestaña `Actions` de GitHub.
+2. Mantener la documentación actualizada con cada cambio relevante.
 
 ## Conclusión
 
-El proyecto tiene una base correcta de repositorio, documentación y despliegue, y la configuración de GitHub Pages ya fue habilitada. El punto crítico pendiente es la ejecución real del deployment para que la página quede visible en la URL pública. La auditoría del proyecto queda actualizada con este estado verificado.
+El proyecto tiene una base correcta de repositorio, documentación y despliegue, y GitHub Pages está habilitado. El workflow completó correctamente la publicación y la página está accesible en su URL pública. La auditoría queda actualizada con esta verificación.

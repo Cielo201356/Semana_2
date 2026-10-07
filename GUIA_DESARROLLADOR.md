@@ -66,7 +66,15 @@ El repositorio incluye un workflow automatizado en:
 1. Subir el repositorio a GitHub.
 2. En la configuración del repositorio, ir a `Settings > Pages`.
 3. Elegir `GitHub Actions` como origen.
-4. Confirmar que el workflow se dispara con el push a la rama principal.
+4. Confirmar que el workflow se dispara con el push a `main` o ejecutarlo manualmente desde `Actions > Deploy static site to GitHub Pages > Run workflow`.
+5. En `Actions`, abrir la ejecución más reciente y verificar que el job `deploy` finalizó con estado `success`.
+6. Abrir el sitio publicado y comprobar que responde correctamente:
+
+   <https://cielo201356.github.io/Semana_2/>
+
+### Estado actual
+
+El despliegue inicial se completó correctamente. La ejecución [#4](https://github.com/Cielo201356/Semana_2/actions/runs/37659315864), correspondiente al commit `74f696d` de `main`, terminó con éxito. El sitio publicado responde con HTTP 200.
 
 ## Buenas prácticas
 

@@ -2,7 +2,7 @@
 
 ## Fecha
 
-2026-10-06
+2026-10-07
 
 ## Responsable
 
@@ -10,20 +10,20 @@ Equipo de desarrollo / auditoría interna
 
 ## Objetivo
 
-Verificar que la estructura base del proyecto cumple requisitos mínimos de control, documentación y despliegue para GitHub Pages.
+Verificar el estado real del repositorio, la documentación y la preparación para la publicación del sitio en GitHub Pages.
 
 ## Alcance
 
-- Revisión de estructura del repositorio.
-- Validación de documentación del proyecto.
-- Comprobación de preparación para despliegue.
-- Registro de riesgos y acciones pendientes.
+- Revisión de la estructura del repositorio.
+- Validación de la documentación del proyecto.
+- Comprobación del estado de GitHub Pages y del workflow de despliegue.
+- Registro de riesgos, observaciones y acciones pendientes.
 
 ## Resultados de auditoría
 
 ### 1. Estructura del repositorio
 
-Se confirma la creación de archivos base para el sitio y la documentación:
+Se confirma la creación y sincronización de los archivos base del proyecto:
 
 - `index.html`
 - `styles.css`
@@ -33,39 +33,61 @@ Se confirma la creación de archivos base para el sitio y la documentación:
 - `GUIA_DESARROLLADOR.md`
 - `.github/workflows/deploy-pages.yml`
 
+El repositorio ya está conectado al remoto de GitHub y el proyecto se encuentra subido en la rama `main`.
+
 ### 2. Documentación
 
-Se dispone de:
+Se dispone de una base documental adecuada:
 
 - README general del proyecto.
-- Documento de auditoría con alcance y observaciones.
-- Guía del desarrollador con instrucciones para trabajo local y despliegue.
+- Documento de auditoría con estado y recomendaciones.
+- Guía del desarrollador para trabajar y publicar el sitio.
 
-### 3. Despliegue
+### 3. Despliegue y GitHub Pages
 
-Se prepara el flujo de despliegue para GitHub Pages usando GitHub Actions con publicador de artefactos de Pages.
+Se preparó un workflow para GitHub Pages basado en GitHub Actions:
 
-## Observaciones
+- `actions/checkout@v4`
+- `actions/configure-pages@v5`
+- `actions/upload-pages-artifact@v3`
+- `actions/deploy-pages@v4`
+
+Además, la opción de GitHub Pages quedó habilitada en el repositorio.
+
+## Estado real verificado
 
 ### Cumplido
 
-- El proyecto está listo para una publicación estática básica.
-- Se documenta la auditoría del proceso.
-- La guía de desarrollo orienta al equipo en ejecución y mantenimiento.
-- La rama de despliegue puede publicarse con GitHub Pages.
+- El proyecto está subido a GitHub correctamente.
+- El repositorio tiene la estructura base necesaria.
+- La documentación del proyecto está creada.
+- GitHub Pages está habilitado para el repositorio.
+- El workflow de despliegue está preparado para ejecutarse.
 
-### Riesgos medios
+### Pendiente
 
-- El repositorio aún requiere sincronización real con GitHub para activar el despliegue.
-- Si se añaden más páginas dinámicas, será necesario ampliar la estrategia de publicación.
+- Ejecutar y completar el primer despliegue del workflow en GitHub Actions.
+- Confirmar que la URL pública responde con la página publicada.
+
+## Observaciones
+
+### Riesgos identificados
+
+- La publicación final depende de la ejecución exitosa del workflow en GitHub.
+- Si el workflow falla, la causa puede estar en la configuración del entorno o en la visibilidad del repositorio.
+- Es necesario validar la URL pública al finalizar el deployment.
+
+### Evidencia técnica
+
+Se verificó que la URL de GitHub Pages devuelve `404` mientras la publicación final no se ha completado, lo que confirma que la web no está aún publicada en producción, aunque la configuración base y el workflow ya existen.
 
 ## Recomendaciones
 
-1. Sincronizar el repositorio con el remoto de GitHub.
-2. Hacer push a la rama principal.
-3. Activar GitHub Pages desde la configuración del repositorio.
-4. Revisar la ejecución del workflow tras el primer despliegue.
+1. Revisar la pestaña `Actions` en GitHub.
+2. Ejecutar manualmente el workflow si aún no se ha lanzado.
+3. Confirmar la publicación final en la URL del sitio.
+4. Mantener la documentación actualizada con cada cambio relevante.
 
 ## Conclusión
 
-El proyecto cumple con la base mínima de documentación y despliegue para una entrega funcional y auditable. La publicación final depende de la conexión y validación del repositorio en GitHub.
+El proyecto tiene una base correcta de repositorio, documentación y despliegue, y la configuración de GitHub Pages ya fue habilitada. El punto crítico pendiente es la ejecución real del deployment para que la página quede visible en la URL pública. La auditoría del proyecto queda actualizada con este estado verificado.

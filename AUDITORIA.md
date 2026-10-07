@@ -62,27 +62,27 @@ Además, la opción de GitHub Pages quedó habilitada en el repositorio.
 - El repositorio tiene la estructura base necesaria.
 - La documentación del proyecto está creada.
 - GitHub Pages está habilitado para el repositorio.
-- El workflow de GitHub Actions completó correctamente el despliegue más reciente en `main` (ejecución [#4](https://github.com/Cielo201356/Semana_2/actions/runs/37659315864), commit `74f696d`).
+- El workflow de GitHub Actions completó correctamente el despliegue más reciente en `main` (ejecución [#5](https://github.com/Cielo201356/Semana_2/actions/runs/37690983427), commit `dec6e00`).
 - La URL pública de GitHub Pages responde con HTTP 200 y muestra el formulario publicado: <https://cielo201356.github.io/Semana_2/>.
 
 ### Pendientes
 
-- No quedan pendientes para completar y verificar el despliegue inicial.
+- Ninguno: el despliegue inicial ya se ejecutó correctamente y se verificó que la URL pública responde con HTTP 200.
 
 ## Observaciones
 
 ### Riesgos y observaciones
 
-- La primera ejecución del workflow falló; las ejecuciones posteriores completaron correctamente, incluida la ejecución más reciente (#4).
+- La primera ejecución del workflow falló; las ejecuciones posteriores completaron correctamente, incluida la ejecución más reciente (#5).
 - El job `deploy` y sus pasos de configuración, carga del artefacto y publicación terminaron con éxito.
 
 ### Evidencia técnica
 
-Se verificó que la ejecución más reciente del workflow concluyó con estado `success` para el commit `74f696d985455c29d5f8179accce85ba06acf8fd`. La URL <https://cielo201356.github.io/Semana_2/> devuelve HTTP 200 y presenta el formulario “Crear cuenta”.
+Se verificó que la ejecución más reciente del workflow concluyó con estado `success` para el commit `dec6e0022a675f467efa86e1655907dae7400cf5`. La URL <https://cielo201356.github.io/Semana_2/> devuelve HTTP 200 y presenta el formulario “Crear cuenta”.
 
 ## Recomendaciones
 
-1. Consultar la [ejecución completada](https://github.com/Cielo201356/Semana_2/actions/runs/37659315864) en la pestaña `Actions` de GitHub.
+1. Consultar la [ejecución completada](https://github.com/Cielo201356/Semana_2/actions/runs/37690983427) en la pestaña `Actions` de GitHub.
 2. Mantener la documentación actualizada con cada cambio relevante.
 
 ## Conclusión
